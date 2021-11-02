@@ -1,6 +1,10 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', function() {
+
+
+
+
     const box = document.querySelector('.sources')
     const btn = document.querySelector('#link')
     const close = document.querySelector('.close')
@@ -56,4 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
         ScrollReveal().reveal(item, {duration: 2000, delay: 200, origin: 'top', distance: '30px'});
     })
     ScrollReveal().reveal('.beautify-block_reverse', {duration: 2000, delay: 200, origin: 'top', distance: '30px'});
+
+
 })
