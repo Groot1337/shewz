@@ -49,23 +49,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+    ScrollReveal().reveal('.main__ul', {duration: 1500, delay: 100, origin: 'top', distance: '30px'})
     ScrollReveal().reveal('.main__title', {duration: 1000, delay: 600, origin: 'top', distance: '30px', afterReveal: function() {
         new TypeIt("#schewz", {
             speed: 45,
             strings: "Краткий экскурс и достопримечательности этой замечатльной страны"
-        }).go();
-    }});
-    ScrollReveal().reveal('.main__ul', {duration: 1500, delay: 100, origin: 'top', distance: '30px'});
-    ScrollReveal().reveal('.country__descr', {duration: 1500, delay: 300, origin: 'top', distance: '30px'});
+        }).go()
+    }})
+    ScrollReveal().reveal('.main__arrow', {duration: 1500, delay: 850, origin: 'top', distance: '30px'})
+    ScrollReveal().reveal('.country__descr', {duration: 1500, delay: 300, origin: 'top', distance: '30px'})
     let i  = 0
     document.querySelectorAll('.country-block').forEach((item) => {
-        ScrollReveal().reveal(item, {duration: 1500, delay: 200 + i, origin: 'top', distance: '30px'});
+        ScrollReveal().reveal(item, {duration: 1500, delay: 200 + i, origin: 'top', distance: '30px'})
         i = i + 500
     })
     document.querySelectorAll('.beautify-block').forEach((item) => {
-        ScrollReveal().reveal(item, {duration: 2000, delay: 200, origin: 'top', distance: '30px'});
+        ScrollReveal().reveal(item, {duration: 2000, delay: 200, origin: 'top', distance: '30px'})
     })
-    ScrollReveal().reveal('.beautify-block_reverse', {duration: 2000, delay: 200, origin: 'top', distance: '30px'});
+    ScrollReveal().reveal('.beautify-block_reverse', {duration: 2000, delay: 200, origin: 'top', distance: '30px'})
 
 
 })
