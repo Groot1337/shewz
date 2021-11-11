@@ -3,43 +3,49 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 
+    //modal
 
 
-    const box = document.querySelector('.sources')
-    const btn = document.querySelector('#link')
-    const close = document.querySelector('.close')
+    function modal(btnSelector, boxSelector, closeSelector, active) {
+        const btn = document.querySelector(btnSelector)
+        const box = document.querySelector(boxSelector)
+        const close = document.querySelector(closeSelector)
 
-    function delActive() {
-        box.classList.remove('active')
-        document.body.style.overflow = ''
+        btn.addEventListener('click', (e) => {
+            if (e.target) {
+                e.preventDefault()
+            }
+            box.classList.add(active)
+            document.body.style.overflow = 'hidden'
+        })
+
+        close.addEventListener('click', () => {
+            box.classList.remove(active)
+            document.body.style.overflow = ''
+        })
+
+        box.addEventListener('click', (e) => {
+            if (e.target && e.target === box) {
+                box.classList.remove(active)
+                document.body.style.overflow = ''
+            }
+        })
+
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Escape' && box.classList.contains(active)) {
+                box.classList.remove(active)
+                document.body.style.overflow = ''
+            }
+        })
     }
 
-    function active() {
-        box.classList.add('active')
-        document.body.style.overflow = 'hidden'
-    }
-
-    btn.addEventListener('click', function(e) {
-        e.preventDefault()
-        active()
-    })
-
-    close.addEventListener('click', function() {
-        delActive()
-    })
+    modal('#link', '.sources', '.close', 'active')
 
 
-    box.addEventListener('click', function(e) {
-        if (e.target.classList.contains('sources')) {
-            delActive()
-        }
-    })
 
-    document.addEventListener('keydown', function(e) {
-        if (e.code === 'Escape' && box.classList.contains('active')) {
-            delActive()
-        }
-    })
+
+    //animation and more
+
 
 
 
