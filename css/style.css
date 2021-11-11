@@ -50,7 +50,7 @@ body {
         color: #FFFFFF;
         text-decoration: none; }
   .main__text {
-    margin-top: 205px; }
+    margin-top: 20%; }
   .main__title {
     max-width: 543px;
     font-size: 85px;
@@ -70,7 +70,7 @@ body {
     position: absolute;
     display: block;
     right: 50%;
-    bottom: 90px;
+    bottom: 10%;
     width: 60px;
     height: 60px;
     -webkit-transform: translateX(50%);
