@@ -67,18 +67,16 @@ body {
     color: #FFFFFF;
     margin: 0 auto; }
   .main__arrow {
+    display: block;
     position: absolute;
-    left: 50%;
-    bottom: 75px;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    right: 48%;
+    bottom: 90px;
     width: 50px;
     height: 50px;
     -webkit-animation: arrow  2s infinite ease-in-out;
             animation: arrow  2s infinite ease-in-out; }
     .main__arrow img {
-      display: block;
-      margin: 0 auto; }
+      display: block; }
 
 .title {
   font-size: 31px;
