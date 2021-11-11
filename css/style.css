@@ -16,10 +16,10 @@ body {
   padding: 0 15px; }
 
 .main {
+  position: relative;
   padding: 67px 0 0 0;
   background: url("../img/Main.png") center center/cover no-repeat;
-  background-attachment: fixed;
-  min-height: 835px; }
+  min-height: 100vh; }
   .main nav ul {
     margin: 0;
     padding: 0;
@@ -66,6 +66,21 @@ body {
     text-align: center;
     color: #FFFFFF;
     margin: 0 auto; }
+  .main__arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 75px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+    -webkit-animation: arrow  2s infinite ease-in-out;
+            animation: arrow  2s infinite ease-in-out; }
+    .main__arrow img {
+      display: block;
+      margin: 0 auto; }
 
 .title {
   font-size: 31px;
@@ -98,9 +113,9 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin-top: 80px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -137,7 +152,8 @@ body {
       line-height: 30px;
       text-align: center;
       margin-top: 11px;
-      color: #000000; }
+      color: #000000;
+      min-height: 425px; }
 
 .beautify {
   padding: 133px 0; }
@@ -315,7 +331,8 @@ body {
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
         color: black;
-        text-decoration: none; }
+        text-decoration: none;
+        width: 125px; }
         .sources ul li a:hover {
           color: red; }
   .sources .close {
@@ -418,5 +435,25 @@ body {
 
   .title {
     font-size: 20px; } }
+@-webkit-keyframes arrow {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
+  50% {
+    -webkit-transform: translateY(8%);
+            transform: translateY(8%); }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+@keyframes arrow {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
+  50% {
+    -webkit-transform: translateY(8%);
+            transform: translateY(8%); }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
 
 /*# sourceMappingURL=style.css.map */
